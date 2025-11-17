@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>2025级11月16日模拟考成绩查询</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #e8f4f8; font-family: "宋体", serif; }
+        .header { background: #1890ff; color: #fff; text-align: center; padding: 20px; font-size: 28px; font-weight: bold; }
+        .content { width: 600px; margin: 50px auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 25px; }
+        label { display: block; margin-bottom: 10px; font-size: 18px; color: #333; }
+        input { width: 100%; height: 50px; padding: 0 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+        .submit-btn { width: 100%; height: 55px; background: #1890ff; color: #fff; border: none; border-radius: 5px; font-size: 20px; cursor: pointer; }
+        .submit-btn:hover { background: #096dd9; }
+    </style>
+</head>
+<body>
+    <div class="header">2025级11月6日英语四级模拟考试成绩查询</div>
+    <div class="content">
+        <div class="form-group">
+            <label for="studentId">输入学号</label>
+            <input type="text" id="studentId" placeholder="请输入你的学号">
+        </div>
+        <div class="form-group">
+            <label for="name">输入姓名</label>
+            <input type="text" id="name" placeholder="请输入你的姓名">
+        </div>
+        <button class="submit-btn" id="queryBtn">查询成绩</button>
+    </div>
+
+    <script>
+        const queryBtn = document.getElementById('queryBtn');
+        const studentId = document.getElementById('studentId');
+        const name = document.getElementById('name');
+
+        queryBtn.addEventListener('click', () => {
+            if (!studentId.value || !name.value) {
+                alert("请填写完整信息！");
+                return;
+            }
+            // 恶搞成绩结果（随机生成搞笑分数）
+            const scores = ["0分（恭喜你成功避开所有正确答案😂）", "38分（差2分就及格，再接再厉～）", "100分（假的！你被骗啦，其实是0分😜）", "59分（老师就差1分，故意的～）"];
+            const randomScore = scores[Math.floor(Math.random() * scores.length)];
+            alert(`🎉 ${name.value}（学号：${studentId.value}）的成绩：\n${randomScore}\n\n提示：仅供娱乐，切勿当真～`);
+        });
+    </script>
+</body>
+</html>
